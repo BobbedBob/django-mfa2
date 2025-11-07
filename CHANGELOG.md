@@ -1,5 +1,9 @@
 # Change Log
 
+## 3.1.2
+* Fix: Issue while adding Email as 2FA.
+
+
 ## 3.1.1
 * Fix: Issue #100, Issue related to error message when jsonfield isn't installed on django < 3.1.
 
