@@ -41,7 +41,7 @@ def start(request):
         if request.session["email_secret"] == otp:  # if successful
             uk = User_Keys()
             User, USERNAME_FIELD = get_username_field()
-            uk.username = USERNAME_FIELD
+            uk.username = getattr(request.user, USERNAME_FIELD)
             uk.key_type = "Email"
             uk.enabled = 1
             uk.save()
