@@ -1,5 +1,10 @@
 # Change Log
 
+## 3.2
+* Add deprecation warning for U2F
+* Added 95% test coverage thanks to @mdewhirst
+* Added support to FIDO < 2.3.
+
 ## 3.1.2
 * Fix: Issue while adding Email as 2FA.
 

@@ -171,12 +171,22 @@ FIDO_SERVER_ID = (
 )
 FIDO_SERVER_NAME = "TestApp"
 
-
 CSP = ("'self'", f"*.localhost")
-CSP_DEFAULT_SRC = CSP
-CSP_IMG_SRC = CSP + ("data:", "blob:")
-CSP_FONT_SRC = CSP + ("data:",)
-CSP_SCRIPT_SRC = CSP
-CSP_STYLE_SRC = CSP
-CSP_CONNECT_SRC = CSP
-CSP_FORM_ACTION = CSP
+CONTENT_SECURITY_POLICY = {
+    "DIRECTIVES": {
+        "default-src": CSP,
+        "img-src": CSP + ("data:", "blob:"),
+        "font-src": CSP + ("data:",),
+        "style-src": CSP,
+        "script-src": CSP,
+        "connect-src": CSP,
+        "form-action": CSP,
+    }
+}
+# CSP_DEFAULT_SRC = CSP
+# CSP_IMG_SRC = CSP + ('data:', 'blob:')
+# CSP_FONT_SRC = CSP + ('data:',)
+# CSP_SCRIPT_SRC = CSP
+# CSP_STYLE_SRC = CSP
+# CSP_CONNECT_SRC = CSP
+# CSP_FORM_ACTION = CSP
